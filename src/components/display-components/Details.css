@@ -1,0 +1,253 @@
+/* General Container for Movie Details */
+#together.container {
+    display: flex;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    transition: all 0.3s ease;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+/* Image and Button Container */
+.image-button-container {
+    position: relative;
+    flex: 1;
+    max-width: 500px;
+}
+
+/* Image Overlay Effect */
+.image-overlay {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease-in-out;
+}
+
+.image-overlay:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.img-d {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Favourite Button */
+.favourite-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: rgba(255, 99, 71, 0.85);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.favourite-button:hover {
+    background: rgba(255, 69, 50, 1);
+}
+
+/* Details Card */
+.details-card {
+    flex: 2;
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(6px);
+    transition: transform 0.2s ease;
+    flex: 1;
+    max-width: 100%;
+}
+
+/* Movie Title */
+.movie-title {
+    font-size: 2rem;
+    margin: 0;
+    color: #333;
+    text-align: center;
+}
+
+/* Meta Info */
+.movie-meta p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Bold Text for Specific Info */
+.movie-meta strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.movie-plot {
+    color: #666;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 6px;
+    border-left: 4px solid #f2b84e;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+/* Back Button */
+.back-button {
+    align-self: flex-start;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    background: linear-gradient(to right, #dfe9f3, #ffffff);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+}
+
+.back-button:hover {
+    background-color: #f2f2f2;
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    /* Mobile-First Design for Movie Details */
+#together.container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on mobile */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+}
+
+/* Image and Button Container */
+.image-button-container {
+    position: relative;
+    width: 40%;
+    margin-bottom: 20px; /* Space below the image */
+}
+
+/* Image Overlay Effect */
+.image-overlay {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.img-d {
+    width: 100%; /* Full width for image */
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Favourite Button */
+.favourite-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: rgba(255, 99, 71, 0.85);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.favourite-button:hover {
+    background: rgba(255, 69, 50, 1);
+}
+
+/* Details Card */
+.details-card {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(6px);
+    flex: 1;
+    width: 100%; /* Full width for mobile */
+}
+
+/* Movie Title */
+.movie-title {
+    font-size: 1.8rem;
+    margin: 0;
+    color: #333;
+    text-align: center;
+}
+
+/* Meta Info */
+.movie-meta p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Bold Text for Specific Info */
+.movie-meta strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.movie-plot {
+    font-style: italic;
+    color: #666;
+}
+
+/* Back Button */
+.back-button {
+    align-self: flex-start;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    background: linear-gradient(to right, #dfe9f3, #ffffff);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%; /* Full width for mobile */
+}
+
+.back-button:hover {
+    background-color: #f2f2f2;
+    transform: scale(1.05);
+}
+
+}

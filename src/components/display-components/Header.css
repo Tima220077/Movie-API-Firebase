@@ -1,0 +1,155 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #ff6b6b, #ff8a65);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 12px 12px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Logo Styles */
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    margin: 0;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation List for Desktop */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Link and Button Styles */
+nav a, #signOutP {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s, background 0.3s;
+    border-radius: 8px;
+}
+
+/* Hover Effects for Links and Button */
+nav a:hover, #signOutP:hover {
+    background-color: #ffeb3b;
+    color: #333;
+}
+
+/* Logged-In State Styles */
+.is-logged-in nav ul {
+    gap: 10px;
+}
+
+.is-logged-in #signOutP {
+    background: #ffeb3b;
+    color: #333;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.is-logged-in #signOutP:hover {
+    background: #ffc107;
+}
+
+/* Responsive Mobile Styles */
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .logo h1 {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+    nav ul {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav a, #signOutP {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: white;
+        transition: background 0.3s, color 0.3s;
+        border-radius: 8px;
+    }
+
+    .icon-favorites:before {
+        content: "★";
+        font-size: 1.1rem;
+    }
+
+    .icon-login:before {
+        content: "🔓";
+        font-size: 1.1rem;
+    }
+
+    .icon-signup:before {
+        content: "✍️";
+        font-size: 1.1rem;
+    }
+
+    #signOutP:before {
+        content: "🚪";
+        font-size: 1.1rem;
+    }
+
+    /* Background Color for Active Button */
+    nav a.active, #signOutP.active {
+        background-color: #ffeb3b;
+        color: #333;
+    }
+}
+footer {
+    margin-top: auto;
+    padding: 20px;
+    background: #604747;
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+    border-radius: 12px 12px 0 0;
+}
+.unstyled-link {
+    text-decoration: none;
+    color: inherit; /* Inherit color from the parent */
+    font: inherit; /* Inherit font styles from the parent */
+}
